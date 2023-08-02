@@ -11,6 +11,8 @@ var document = html(
   body(
     h1("Title Page"),
     p("this is some content"),
+    // conditional expressions
+    If(true, span("true"), span("false")),
     p(
       Data(
         ("style", "border: 1px solid black;"),

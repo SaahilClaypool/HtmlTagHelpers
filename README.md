@@ -18,6 +18,8 @@ var document = html(
   body(
     h1("Title Page"),
     p("this is some content"),
+    // conditional expressions
+    If(true, span("true"), span("false")),
     p(
       Data(
         ("style", "border: 1px solid black;"),
@@ -48,6 +50,9 @@ Outputs:
     <p>
       this is some content
     </p>
+    <span>
+      true
+    </span>
     <p
       style="border: 1px solid black;"
       onClick="console.log('clicked')"

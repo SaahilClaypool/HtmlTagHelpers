@@ -12,4 +12,7 @@ public static partial class TagHelpers
 
   public static HtmlTag H(string tag, params object[] children) =>
     new(tag, Data(), Children: children);
+  
+  public static HtmlTag If(bool condition, HtmlTag ifTrue, HtmlTag ifFalse) =>
+    condition ? ifTrue : ifFalse;
 }
