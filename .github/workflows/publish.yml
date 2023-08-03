@@ -26,4 +26,4 @@ jobs:
       - name: Build (builds package)
         run: dotnet pack --configuration Release --no-restore
       - name: Push to nuget
-        run: dotnet nuget push  "**/netstandard2.0/**/*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push  "src/bin/Release/*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
