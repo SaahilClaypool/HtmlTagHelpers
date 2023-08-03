@@ -5,7 +5,7 @@ DSL for building HTML - inspired by [nitter](https://github.com/zedeus/nitter/bl
 Example
 
 ```cs
-global using static HFunc.TagHelpers;
+global using static HtmlTagHelpers.TagHelpers;
 
 var document = html(
   head(
@@ -21,10 +21,8 @@ var document = html(
     // conditional expressions
     If(true, span("true"), span("false")),
     p(
-      Data(
-        ("style", "border: 1px solid black;"),
-        ("onClick", "console.log('clicked')")
-      ),
+      ("style", "border: 1px solid black;"),
+      ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
     )
   )

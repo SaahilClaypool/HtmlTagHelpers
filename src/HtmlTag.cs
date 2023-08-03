@@ -1,4 +1,4 @@
-namespace HFunc;
+namespace HtmlTagHelpers;
 
 public record HtmlTag(string Tag, HData Props, ICollection<object> Children)
 {

@@ -1,4 +1,4 @@
-﻿global using static HFunc.TagHelpers;
+﻿global using static HtmlTagHelpers.TagHelpers;
 
 var document = html(
   head(

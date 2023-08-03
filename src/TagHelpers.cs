@@ -1,4 +1,4 @@
-namespace HFunc;
+namespace HtmlTagHelpers;
 
 public static partial class TagHelpers
 {
@@ -9,12 +9,12 @@ public static partial class TagHelpers
 
   public static HtmlTag H(string tag, params object[] childrenOrProps)
   {
-    List<(string Key, string Value)> props = new();
-    List<object> childrenItems = new();
+    List<(string Key, string Value)> props = new(childrenOrProps.Length);
+    List<object> childrenItems = new(childrenOrProps.Length);
     foreach (var item in childrenOrProps)
     {
-      if (item is (string key, string value))
-        props.Add((key, value));
+      if (item is ValueTuple<string, string> tuple)
+        props.Add(tuple);
       else
         childrenItems.Add(item);
     }

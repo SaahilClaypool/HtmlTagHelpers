@@ -1,4 +1,4 @@
-namespace HFunc;
+namespace HtmlTagHelpers;
 
 #pragma warning disable IDE1006
 public static partial class TagHelpers

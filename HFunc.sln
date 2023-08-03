@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HFunc", "HFunc.csproj", "{86E968E1-771F-4161-AFDD-24E28D5A3CE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlTagHelpers", "src\HtmlTagHelpers.csproj", "{A18B2975-B1ED-43B9-BE7B-9656BE46B1AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.csproj", "{50D857DC-22C4-45E2-B4EE-E28D73701C4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{86E968E1-771F-4161-AFDD-24E28D5A3CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86E968E1-771F-4161-AFDD-24E28D5A3CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86E968E1-771F-4161-AFDD-24E28D5A3CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86E968E1-771F-4161-AFDD-24E28D5A3CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A18B2975-B1ED-43B9-BE7B-9656BE46B1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18B2975-B1ED-43B9-BE7B-9656BE46B1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18B2975-B1ED-43B9-BE7B-9656BE46B1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18B2975-B1ED-43B9-BE7B-9656BE46B1AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D857DC-22C4-45E2-B4EE-E28D73701C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D857DC-22C4-45E2-B4EE-E28D73701C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D857DC-22C4-45E2-B4EE-E28D73701C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D857DC-22C4-45E2-B4EE-E28D73701C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
