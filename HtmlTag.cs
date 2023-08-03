@@ -31,8 +31,8 @@ public record HtmlTag(string Tag, HData Props, ICollection<object> Children)
     );
     if (indentLevel is null)
       return $"""
-                <{Tag}{Props.Render(indentLevel)}>{children}</{Tag}>
-                """;
+              <{Tag}{Props.Render(indentLevel)}>{children}</{Tag}>
+              """;
     return $"""
             <{Tag}{Props.Render(indentLevel)}>{pad}{children}{parentPad}</{Tag}>
             """;

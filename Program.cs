@@ -14,10 +14,8 @@ var document = html(
     // conditional expressions
     If(true, span("true"), span("false")),
     p(
-      Data(
-        ("style", "border: 1px solid black;"),
-        ("onClick", "console.log('clicked')")
-      ),
+      ("style", "border: 1px solid black;"),
+      ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
     )
   )
