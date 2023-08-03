@@ -24,12 +24,15 @@ var document = html(
       ("style", "border: 1px solid black;"),
       ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
+    ),
+    p(
+      ("hidden", NO_VALUE),
+      "hidden content"
     )
   )
 );
 
 Console.WriteLine(document.Render(0));
-
 ```
 
 Outputs:
@@ -56,6 +59,11 @@ Outputs:
       onClick="console.log('clicked')"
     >
       this paragraph has a border
+    </p>
+     <p
+      hidden
+     >
+      hidden content
     </p>
   </body>
 </html>

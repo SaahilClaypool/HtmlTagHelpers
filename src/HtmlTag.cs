@@ -39,7 +39,7 @@ public record HtmlTag(string Tag, HData Props, ICollection<object> Children)
   }
 }
 
-public record HData(ICollection<(string Key, string Value)> Values)
+public record HData(ICollection<(string Key, object? Value)> Values)
 {
   static readonly Dictionary<int, string> _pads = new();
 
@@ -59,7 +59,9 @@ public record HData(ICollection<(string Key, string Value)> Values)
   {
     if (Values.Count == 0)
       return string.Empty;
-    var renderedValues = Values.Select(kvp => $"{kvp.Key}=\"{kvp.Value}\"");
+    var renderedValues = Values.Select(
+      kvp => kvp.Value != null ? $"{kvp.Key}=\"{kvp.Value}\"" : kvp.Key
+    );
     if (indentLevel is null)
       return " " + string.Join(" ", renderedValues);
 
