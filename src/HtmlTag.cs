@@ -39,7 +39,7 @@ public record HtmlTag(string Tag, HData Props, ICollection<object> Children)
   }
 }
 
-public record HData(ICollection<(string Key, object? Value)> Values)
+public record HData(ICollection<(string Key, string? Value)> Values)
 {
   static readonly Dictionary<int, string> _pads = new();
 
