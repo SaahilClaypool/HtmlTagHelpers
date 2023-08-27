@@ -25,12 +25,19 @@ var document = html(
       ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
     ),
-    p(
-      ("hidden", NO_VALUE),
-      "hidden content"
-    )
+    p(Data(("hidden", NO_VALUE)), "hidden content"),
+    MButton(
+      Data(("onClick", "console.log('override')")),
+      "my button")
   )
 );
+
+// example functional component
+HtmlTag MButton(HData data, params object[] content) =>
+  button(
+    Data(("onClick", "console.log('default')")).Merge(data),
+    children: content
+  );
 
 Console.WriteLine(document.Render(0));
 ```
@@ -60,11 +67,14 @@ Outputs:
     >
       this paragraph has a border
     </p>
-     <p
-      hidden
-     >
+    <p hidden>
       hidden content
     </p>
+    <button
+      onClick="console.log('override')"
+    >
+      my button
+    </button>
   </body>
 </html>
 ```

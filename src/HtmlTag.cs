@@ -41,6 +41,21 @@ public record HtmlTag(string Tag, HData Props, ICollection<object> Children)
 
 public record HData(ICollection<(string Key, string? Value)> Values)
 {
+  /// <summary>
+  /// Merge with another set of data, taking the "<paramref name="other"/>
+  /// values on conflict
+  /// </summary>
+  /// <param name="other"></param>
+  /// <returns></returns>
+  public HData Merge(HData other) =>
+    new(
+      Values
+        .Concat(other.Values)
+        .GroupBy(x => x.Key)
+        .Select(x => (x.Key, x.Last().Value))
+        .ToList()
+    );
+
   static readonly Dictionary<int, string> _pads = new();
 
   static string GetPad(int? p)
