@@ -6,6 +6,10 @@ Example
 
 ```cs
 global using static HtmlTagHelpers.TagHelpers;
+using HtmlTagHelpers;
+
+
+var myElements = new[] { "a", "b", "c" };
 
 var document = html(
   head(
@@ -25,18 +29,17 @@ var document = html(
       ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
     ),
-    p(Data(("hidden", NO_VALUE)), "hidden content"),
-    MButton(
-      Data(("onClick", "console.log('override')")),
-      "my button")
+    p(("hidden", NO_VALUE), "hidden content"),
+    MButton(Data(("onClick", "Console.log('override')")), "test"),
+    ul(myElements.Map(i => li(i)))
   )
 );
 
 // example functional component
-HtmlTag MButton(HData data, params object[] content) =>
+HtmlTag MButton(params HtmlContent[] content) =>
   button(
-    Data(("onClick", "console.log('default')")).Merge(data),
-    children: content
+    Data(("onClick", "console.log('default')")),
+    content
   );
 
 Console.WriteLine(document.Render(0));
@@ -67,14 +70,33 @@ Outputs:
     >
       this paragraph has a border
     </p>
-    <p hidden>
+    <p
+      hidden
+    >
       hidden content
     </p>
     <button
-      onClick="console.log('override')"
+      onClick="Console.log('override')"
     >
-      my button
+      test
     </button>
+    <ul>
+      <li>
+        a
+      </li>
+      <li>
+        b
+      </li>
+      <li>
+        c
+      </li>
+    </ul>
   </body>
 </html>
 ```
+
+## Changelog
+
+### 0.0.6
+
+- Add [OneOf](https://github.com/mcintyre321/OneOf) generation to create typesafe methods

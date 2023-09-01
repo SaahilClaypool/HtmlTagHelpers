@@ -1,6 +1,9 @@
 ﻿global using static HtmlTagHelpers.TagHelpers;
 using HtmlTagHelpers;
 
+
+var myElements = new[] { "a", "b", "c" };
+
 var document = html(
   head(
     script(
@@ -19,16 +22,17 @@ var document = html(
       ("onClick", "console.log('clicked')"),
       "this paragraph has a border"
     ),
-    p(Data(("hidden", NO_VALUE)), "hidden content"),
-    MButton(Data(("onClick", "Console.log('override')")), "test")
+    p(("hidden", NO_VALUE), "hidden content"),
+    MButton(Data(("onClick", "Console.log('override')")), "test"),
+    ul(myElements.Map(i => li(i)))
   )
 );
 
 // example functional component
-HtmlTag MButton(HData data, params object[] content) =>
+HtmlTag MButton(params HtmlContent[] content) =>
   button(
-    Data(("onClick", "console.log('default')")).Merge(data),
-    children: content
+    Data(("onClick", "console.log('default')")),
+    content
   );
 
 Console.WriteLine(document.Render(0));
