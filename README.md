@@ -97,6 +97,10 @@ Outputs:
 
 ## Changelog
 
+### 0.0.7
+
+- Add h1 - h6 missing tag helpers
+
 ### 0.0.6
 
 - Add [OneOf](https://github.com/mcintyre321/OneOf) generation to create typesafe methods

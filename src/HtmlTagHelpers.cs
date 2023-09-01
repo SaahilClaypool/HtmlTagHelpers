@@ -151,6 +151,21 @@ public static partial class TagHelpers
   /// <summary>h1	Defines a hyperlink</summary>
   public static HtmlTag h1(params HtmlContent[] children) => H("h1", children);
 
+  /// <summary>h2	Defines a hyperlink</summary>
+  public static HtmlTag h2(params HtmlContent[] children) => H("h2", children);
+
+  /// <summary>h3	Defines a hyperlink</summary>
+  public static HtmlTag h3(params HtmlContent[] children) => H("h3", children);
+
+  /// <summary>h4	Defines a hyperlink</summary>
+  public static HtmlTag h4(params HtmlContent[] children) => H("h4", children);
+
+  /// <summary>h5	Defines a hyperlink</summary>
+  public static HtmlTag h5(params HtmlContent[] children) => H("h5", children);
+
+  /// <summary>h6	Defines a hyperlink</summary>
+  public static HtmlTag h6(params HtmlContent[] children) => H("h6", children);
+
   /// <summary>head	Defines a hyperlink</summary>
   public static HtmlTag head(params HtmlContent[] children) =>
     H("head", children);

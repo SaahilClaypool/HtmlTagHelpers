@@ -48,16 +48,11 @@ public record HData(ICollection<(string Key, string? Value)> Values)
   /// <param name="other"></param>
   /// <returns></returns>
   public HData Merge(HData other) =>
-    new(
-      CollapseDuplicates(Values.Concat(other.Values))
-    );
+    new(CollapseDuplicates(Values.Concat(other.Values)));
 
-  private static List<(string Key, string? Value)> CollapseDuplicates(IEnumerable<(string Key, string? Value)> values) =>
-      values
-        .GroupBy(x => x.Key)
-        .Select(x => (x.Key, x.Last().Value))
-        .ToList();
-
+  private static List<(string Key, string? Value)> CollapseDuplicates(
+    IEnumerable<(string Key, string? Value)> values
+  ) => values.GroupBy(x => x.Key).Select(x => (x.Key, x.Last().Value)).ToList();
 
   static readonly Dictionary<int, string> _pads = new();
 
@@ -77,9 +72,10 @@ public record HData(ICollection<(string Key, string? Value)> Values)
   {
     if (Values.Count == 0)
       return string.Empty;
-    var renderedValues = CollapseDuplicates(Values).Select(
-      kvp => kvp.Value != null ? $"{kvp.Key}=\"{kvp.Value}\"" : kvp.Key
-    );
+    var renderedValues = CollapseDuplicates(Values)
+      .Select(
+        kvp => kvp.Value != null ? $"{kvp.Key}=\"{kvp.Value}\"" : kvp.Key
+      );
     if (indentLevel is null)
       return " " + string.Join(" ", renderedValues);
 

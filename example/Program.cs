@@ -1,7 +1,6 @@
 ﻿global using static HtmlTagHelpers.TagHelpers;
 using HtmlTagHelpers;
 
-
 var myElements = new[] { "a", "b", "c" };
 
 var document = html(
@@ -30,9 +29,6 @@ var document = html(
 
 // example functional component
 HtmlTag MButton(params HtmlContent[] content) =>
-  button(
-    Data(("onClick", "console.log('default')")),
-    content
-  );
+  button(Data(("onClick", "console.log('default')")), content);
 
 Console.WriteLine(document.Render(0));

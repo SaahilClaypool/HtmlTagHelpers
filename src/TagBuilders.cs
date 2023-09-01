@@ -29,11 +29,15 @@ public static partial class TagHelpers
     return new(tag, new HData(props), childrenItems);
   }
 
-  public static HtmlTag[] Map<T>(this IEnumerable<T> items, Func<T, HtmlTag> map) =>
-    items.Select(map).ToArray();
+  public static HtmlTag[] Map<T>(
+    this IEnumerable<T> items,
+    Func<T, HtmlTag> map
+  ) => items.Select(map).ToArray();
 
-  public static HtmlTag[] Map<T>(this IEnumerable<T> items, Func<T, int, HtmlTag> map) =>
-    items.Select(map).ToArray();
+  public static HtmlTag[] Map<T>(
+    this IEnumerable<T> items,
+    Func<T, int, HtmlTag> map
+  ) => items.Select(map).ToArray();
 
   public static HtmlTag If(bool condition, HtmlTag ifTrue, HtmlTag ifFalse) =>
     condition ? ifTrue : ifFalse;
@@ -43,5 +47,4 @@ public static partial class TagHelpers
     foreach (var i in elements)
       action(i);
   }
-
 }
