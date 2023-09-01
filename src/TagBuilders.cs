@@ -16,12 +16,12 @@ public static partial class TagHelpers
       void HandleContent(HtmlContent content)
       {
         content.Switch(
-          childrenItems.Add,
+          str => childrenItems.Add(str),
           hdata => props.AddRange(hdata.Values),
-          props.Add,
-          childrenItems.Add,
-          childrenItems.AddRange,
-          htmlContent => Each(htmlContent, HandleContent)
+          tuple => props.Add(tuple),
+          tag => childrenItems.Add(tag),
+          tags => childrenItems.AddRange(tags),
+          nestedContent => Each(nestedContent, HandleContent)
         );
       }
       HandleContent(item);
