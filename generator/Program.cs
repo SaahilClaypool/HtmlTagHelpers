@@ -2,13 +2,13 @@
 namespace HtmlTagHelpers;
 
 #pragma warning disable IDE1006
-public static partial class TagHelpers
+public static partial class Prelude
 {
     {{string.Join("\n\n", Tags().Select(tag => $$"""
 
-    /// <summary>{{Tag(tag)}}	Defines a hyperlink</summary>
-    public static HtmlTag {{tag}}(params HtmlContent[] children) =>
-        H("{{Tag(tag)}}", children);
+    /// <summary>{{Tag(tag)}}</summary>
+    public static TagAttributeBuilder {{tag}} =>
+        Tag("{{tag.Replace("@", "")}}");
 """))}}
 }
 """;

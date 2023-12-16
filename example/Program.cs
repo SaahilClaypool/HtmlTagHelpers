@@ -1,34 +1,35 @@
-﻿global using static HtmlTagHelpers.TagHelpers;
+﻿global using static HtmlTagHelpers.Prelude;
 using HtmlTagHelpers;
 
 var myElements = new[] { "a", "b", "c" };
 
-var document = html(
-  head(
-    script(
-      """
+var document = html()(
+  head()(
+    script()(
+      Raw(
+        """
       console.log('hello world')
       """
+      )
     )
   ),
-  body(
-    h1("Title Page"),
-    p("this is some content"),
+  body()(
+    h1()("Title Page"),
+    p()("this is some content"),
     // conditional expressions
-    If(true, span("true"), span("false")),
+    If(true, span()("true"), span()("false")),
     p(
       ("style", "border: 1px solid black;"),
-      ("onClick", "console.log('clicked')"),
-      "this paragraph has a border"
-    ),
-    p(("hidden", NO_VALUE), "hidden content"),
-    MButton(Data(("onClick", "Console.log('override')")), "test"),
-    ul(myElements.Map(i => li(i)))
+      ("onClick", "console.log('clicked')")
+    )("this paragraph has a border"),
+    p(Attr("hidden"))("hidden content"),
+    MButton(("onClick", "console.log('override')"))("test"),
+    ul()(myElements.Select(i => li()(i)).ToArray())
   )
 );
 
 // example functional component
-HtmlTag MButton(params HtmlContent[] content) =>
-  button(Data(("onClick", "console.log('default')")), content);
+TagBuilder MButton(params Eighty.Attr[] content) =>
+  button(content.Append(("onClick", "console.log('default')")).ToArray());
 
-Console.WriteLine(document.Render(0));
+Console.WriteLine(document.ToString());

@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\HtmlTagHelpers.csproj" />
+    <PackageReference Include="eighty" Version="2.1.0" />
   </ItemGroup>
 
   <PropertyGroup>

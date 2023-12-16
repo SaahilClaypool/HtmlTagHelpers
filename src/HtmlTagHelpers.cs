@@ -1,414 +1,332 @@
 namespace HtmlTagHelpers;
 
 #pragma warning disable IDE1006
-public static partial class TagHelpers
+public static partial class Prelude
 {
-  /// <summary>a	Defines a hyperlink</summary>
-  public static HtmlTag a(params HtmlContent[] children) => H("a", children);
+  /// <summary>a</summary>
+  public static TagAttributeBuilder a => Tag("a");
 
-  /// <summary>abbr	Defines a hyperlink</summary>
-  public static HtmlTag abbr(params HtmlContent[] children) =>
-    H("abbr", children);
+  /// <summary>abbr</summary>
+  public static TagAttributeBuilder abbr => Tag("abbr");
 
-  /// <summary>address	Defines a hyperlink</summary>
-  public static HtmlTag address(params HtmlContent[] children) =>
-    H("address", children);
+  /// <summary>address</summary>
+  public static TagAttributeBuilder address => Tag("address");
 
-  /// <summary>area	Defines a hyperlink</summary>
-  public static HtmlTag area(params HtmlContent[] children) =>
-    H("area", children);
+  /// <summary>area</summary>
+  public static TagAttributeBuilder area => Tag("area");
 
-  /// <summary>article	Defines a hyperlink</summary>
-  public static HtmlTag article(params HtmlContent[] children) =>
-    H("article", children);
+  /// <summary>article</summary>
+  public static TagAttributeBuilder article => Tag("article");
 
-  /// <summary>aside	Defines a hyperlink</summary>
-  public static HtmlTag aside(params HtmlContent[] children) =>
-    H("aside", children);
+  /// <summary>aside</summary>
+  public static TagAttributeBuilder aside => Tag("aside");
 
-  /// <summary>audio	Defines a hyperlink</summary>
-  public static HtmlTag audio(params HtmlContent[] children) =>
-    H("audio", children);
+  /// <summary>audio</summary>
+  public static TagAttributeBuilder audio => Tag("audio");
 
-  /// <summary>b	Defines a hyperlink</summary>
-  public static HtmlTag b(params HtmlContent[] children) => H("b", children);
+  /// <summary>b</summary>
+  public static TagAttributeBuilder b => Tag("b");
 
-  /// <summary>base	Defines a hyperlink</summary>
-  public static HtmlTag @base(params HtmlContent[] children) =>
-    H("base", children);
+  /// <summary>base</summary>
+  public static TagAttributeBuilder @base => Tag("base");
 
-  /// <summary>bdi	Defines a hyperlink</summary>
-  public static HtmlTag bdi(params HtmlContent[] children) =>
-    H("bdi", children);
+  /// <summary>bdi</summary>
+  public static TagAttributeBuilder bdi => Tag("bdi");
 
-  /// <summary>bdo	Defines a hyperlink</summary>
-  public static HtmlTag bdo(params HtmlContent[] children) =>
-    H("bdo", children);
+  /// <summary>bdo</summary>
+  public static TagAttributeBuilder bdo => Tag("bdo");
 
-  /// <summary>blockquote	Defines a hyperlink</summary>
-  public static HtmlTag blockquote(params HtmlContent[] children) =>
-    H("blockquote", children);
+  /// <summary>blockquote</summary>
+  public static TagAttributeBuilder blockquote => Tag("blockquote");
 
-  /// <summary>body	Defines a hyperlink</summary>
-  public static HtmlTag body(params HtmlContent[] children) =>
-    H("body", children);
+  /// <summary>body</summary>
+  public static TagAttributeBuilder body => Tag("body");
 
-  /// <summary>br	Defines a hyperlink</summary>
-  public static HtmlTag br(params HtmlContent[] children) => H("br", children);
+  /// <summary>br</summary>
+  public static TagAttributeBuilder br => Tag("br");
 
-  /// <summary>button	Defines a hyperlink</summary>
-  public static HtmlTag button(params HtmlContent[] children) =>
-    H("button", children);
+  /// <summary>button</summary>
+  public static TagAttributeBuilder button => Tag("button");
 
-  /// <summary>canvas	Defines a hyperlink</summary>
-  public static HtmlTag canvas(params HtmlContent[] children) =>
-    H("canvas", children);
+  /// <summary>canvas</summary>
+  public static TagAttributeBuilder canvas => Tag("canvas");
 
-  /// <summary>caption	Defines a hyperlink</summary>
-  public static HtmlTag caption(params HtmlContent[] children) =>
-    H("caption", children);
+  /// <summary>caption</summary>
+  public static TagAttributeBuilder caption => Tag("caption");
 
-  /// <summary>cite	Defines a hyperlink</summary>
-  public static HtmlTag cite(params HtmlContent[] children) =>
-    H("cite", children);
+  /// <summary>cite</summary>
+  public static TagAttributeBuilder cite => Tag("cite");
 
-  /// <summary>code	Defines a hyperlink</summary>
-  public static HtmlTag code(params HtmlContent[] children) =>
-    H("code", children);
+  /// <summary>code</summary>
+  public static TagAttributeBuilder code => Tag("code");
 
-  /// <summary>col	Defines a hyperlink</summary>
-  public static HtmlTag col(params HtmlContent[] children) =>
-    H("col", children);
+  /// <summary>col</summary>
+  public static TagAttributeBuilder col => Tag("col");
 
-  /// <summary>colgroup	Defines a hyperlink</summary>
-  public static HtmlTag colgroup(params HtmlContent[] children) =>
-    H("colgroup", children);
+  /// <summary>colgroup</summary>
+  public static TagAttributeBuilder colgroup => Tag("colgroup");
 
-  /// <summary>data	Defines a hyperlink</summary>
-  public static HtmlTag data(params HtmlContent[] children) =>
-    H("data", children);
+  /// <summary>data</summary>
+  public static TagAttributeBuilder data => Tag("data");
 
-  /// <summary>datalist	Defines a hyperlink</summary>
-  public static HtmlTag datalist(params HtmlContent[] children) =>
-    H("datalist", children);
+  /// <summary>datalist</summary>
+  public static TagAttributeBuilder datalist => Tag("datalist");
 
-  /// <summary>dd	Defines a hyperlink</summary>
-  public static HtmlTag dd(params HtmlContent[] children) => H("dd", children);
+  /// <summary>dd</summary>
+  public static TagAttributeBuilder dd => Tag("dd");
 
-  /// <summary>del	Defines a hyperlink</summary>
-  public static HtmlTag del(params HtmlContent[] children) =>
-    H("del", children);
+  /// <summary>del</summary>
+  public static TagAttributeBuilder del => Tag("del");
 
-  /// <summary>details	Defines a hyperlink</summary>
-  public static HtmlTag details(params HtmlContent[] children) =>
-    H("details", children);
+  /// <summary>details</summary>
+  public static TagAttributeBuilder details => Tag("details");
 
-  /// <summary>dfn	Defines a hyperlink</summary>
-  public static HtmlTag dfn(params HtmlContent[] children) =>
-    H("dfn", children);
+  /// <summary>dfn</summary>
+  public static TagAttributeBuilder dfn => Tag("dfn");
 
-  /// <summary>dialog	Defines a hyperlink</summary>
-  public static HtmlTag dialog(params HtmlContent[] children) =>
-    H("dialog", children);
+  /// <summary>dialog</summary>
+  public static TagAttributeBuilder dialog => Tag("dialog");
 
-  /// <summary>div	Defines a hyperlink</summary>
-  public static HtmlTag div(params HtmlContent[] children) =>
-    H("div", children);
+  /// <summary>div</summary>
+  public static TagAttributeBuilder div => Tag("div");
 
-  /// <summary>dl	Defines a hyperlink</summary>
-  public static HtmlTag dl(params HtmlContent[] children) => H("dl", children);
+  /// <summary>dl</summary>
+  public static TagAttributeBuilder dl => Tag("dl");
 
-  /// <summary>dt	Defines a hyperlink</summary>
-  public static HtmlTag dt(params HtmlContent[] children) => H("dt", children);
+  /// <summary>dt</summary>
+  public static TagAttributeBuilder dt => Tag("dt");
 
-  /// <summary>em	Defines a hyperlink</summary>
-  public static HtmlTag em(params HtmlContent[] children) => H("em", children);
+  /// <summary>em</summary>
+  public static TagAttributeBuilder em => Tag("em");
 
-  /// <summary>embed	Defines a hyperlink</summary>
-  public static HtmlTag embed(params HtmlContent[] children) =>
-    H("embed", children);
+  /// <summary>embed</summary>
+  public static TagAttributeBuilder embed => Tag("embed");
 
-  /// <summary>fieldset	Defines a hyperlink</summary>
-  public static HtmlTag fieldset(params HtmlContent[] children) =>
-    H("fieldset", children);
+  /// <summary>fieldset</summary>
+  public static TagAttributeBuilder fieldset => Tag("fieldset");
 
-  /// <summary>figcaption	Defines a hyperlink</summary>
-  public static HtmlTag figcaption(params HtmlContent[] children) =>
-    H("figcaption", children);
+  /// <summary>figcaption</summary>
+  public static TagAttributeBuilder figcaption => Tag("figcaption");
 
-  /// <summary>figure	Defines a hyperlink</summary>
-  public static HtmlTag figure(params HtmlContent[] children) =>
-    H("figure", children);
+  /// <summary>figure</summary>
+  public static TagAttributeBuilder figure => Tag("figure");
 
-  /// <summary>footer	Defines a hyperlink</summary>
-  public static HtmlTag footer(params HtmlContent[] children) =>
-    H("footer", children);
+  /// <summary>footer</summary>
+  public static TagAttributeBuilder footer => Tag("footer");
 
-  /// <summary>form	Defines a hyperlink</summary>
-  public static HtmlTag form(params HtmlContent[] children) =>
-    H("form", children);
+  /// <summary>form</summary>
+  public static TagAttributeBuilder form => Tag("form");
 
-  /// <summary>h1	Defines a hyperlink</summary>
-  public static HtmlTag h1(params HtmlContent[] children) => H("h1", children);
+  /// <summary>h1</summary>
+  public static TagAttributeBuilder h1 => Tag("h1");
 
-  /// <summary>h2	Defines a hyperlink</summary>
-  public static HtmlTag h2(params HtmlContent[] children) => H("h2", children);
+  /// <summary>h2</summary>
+  public static TagAttributeBuilder h2 => Tag("h2");
 
-  /// <summary>h3	Defines a hyperlink</summary>
-  public static HtmlTag h3(params HtmlContent[] children) => H("h3", children);
+  /// <summary>h3</summary>
+  public static TagAttributeBuilder h3 => Tag("h3");
 
-  /// <summary>h4	Defines a hyperlink</summary>
-  public static HtmlTag h4(params HtmlContent[] children) => H("h4", children);
+  /// <summary>h4</summary>
+  public static TagAttributeBuilder h4 => Tag("h4");
 
-  /// <summary>h5	Defines a hyperlink</summary>
-  public static HtmlTag h5(params HtmlContent[] children) => H("h5", children);
+  /// <summary>h5</summary>
+  public static TagAttributeBuilder h5 => Tag("h5");
 
-  /// <summary>h6	Defines a hyperlink</summary>
-  public static HtmlTag h6(params HtmlContent[] children) => H("h6", children);
+  /// <summary>h6</summary>
+  public static TagAttributeBuilder h6 => Tag("h6");
 
-  /// <summary>head	Defines a hyperlink</summary>
-  public static HtmlTag head(params HtmlContent[] children) =>
-    H("head", children);
+  /// <summary>head</summary>
+  public static TagAttributeBuilder head => Tag("head");
 
-  /// <summary>header	Defines a hyperlink</summary>
-  public static HtmlTag header(params HtmlContent[] children) =>
-    H("header", children);
+  /// <summary>header</summary>
+  public static TagAttributeBuilder header => Tag("header");
 
-  /// <summary>hr	Defines a hyperlink</summary>
-  public static HtmlTag hr(params HtmlContent[] children) => H("hr", children);
+  /// <summary>hr</summary>
+  public static TagAttributeBuilder hr => Tag("hr");
 
-  /// <summary>html	Defines a hyperlink</summary>
-  public static HtmlTag html(params HtmlContent[] children) =>
-    H("html", children);
+  /// <summary>html</summary>
+  public static TagAttributeBuilder html => Tag("html");
 
-  /// <summary>i	Defines a hyperlink</summary>
-  public static HtmlTag i(params HtmlContent[] children) => H("i", children);
+  /// <summary>i</summary>
+  public static TagAttributeBuilder i => Tag("i");
 
-  /// <summary>iframe	Defines a hyperlink</summary>
-  public static HtmlTag iframe(params HtmlContent[] children) =>
-    H("iframe", children);
+  /// <summary>iframe</summary>
+  public static TagAttributeBuilder iframe => Tag("iframe");
 
-  /// <summary>img	Defines a hyperlink</summary>
-  public static HtmlTag img(params HtmlContent[] children) =>
-    H("img", children);
+  /// <summary>img</summary>
+  public static TagAttributeBuilder img => Tag("img");
 
-  /// <summary>input	Defines a hyperlink</summary>
-  public static HtmlTag input(params HtmlContent[] children) =>
-    H("input", children);
+  /// <summary>input</summary>
+  public static TagAttributeBuilder input => Tag("input");
 
-  /// <summary>ins	Defines a hyperlink</summary>
-  public static HtmlTag ins(params HtmlContent[] children) =>
-    H("ins", children);
+  /// <summary>ins</summary>
+  public static TagAttributeBuilder ins => Tag("ins");
 
-  /// <summary>kbd	Defines a hyperlink</summary>
-  public static HtmlTag kbd(params HtmlContent[] children) =>
-    H("kbd", children);
+  /// <summary>kbd</summary>
+  public static TagAttributeBuilder kbd => Tag("kbd");
 
-  /// <summary>label	Defines a hyperlink</summary>
-  public static HtmlTag label(params HtmlContent[] children) =>
-    H("label", children);
+  /// <summary>label</summary>
+  public static TagAttributeBuilder label => Tag("label");
 
-  /// <summary>legend	Defines a hyperlink</summary>
-  public static HtmlTag legend(params HtmlContent[] children) =>
-    H("legend", children);
+  /// <summary>legend</summary>
+  public static TagAttributeBuilder legend => Tag("legend");
 
-  /// <summary>li	Defines a hyperlink</summary>
-  public static HtmlTag li(params HtmlContent[] children) => H("li", children);
+  /// <summary>li</summary>
+  public static TagAttributeBuilder li => Tag("li");
 
-  /// <summary>link	Defines a hyperlink</summary>
-  public static HtmlTag link(params HtmlContent[] children) =>
-    H("link", children);
+  /// <summary>link</summary>
+  public static TagAttributeBuilder link => Tag("link");
 
-  /// <summary>main	Defines a hyperlink</summary>
-  public static HtmlTag main(params HtmlContent[] children) =>
-    H("main", children);
+  /// <summary>main</summary>
+  public static TagAttributeBuilder main => Tag("main");
 
-  /// <summary>map	Defines a hyperlink</summary>
-  public static HtmlTag map(params HtmlContent[] children) =>
-    H("map", children);
+  /// <summary>map</summary>
+  public static TagAttributeBuilder map => Tag("map");
 
-  /// <summary>mark	Defines a hyperlink</summary>
-  public static HtmlTag mark(params HtmlContent[] children) =>
-    H("mark", children);
+  /// <summary>mark</summary>
+  public static TagAttributeBuilder mark => Tag("mark");
 
-  /// <summary>meta	Defines a hyperlink</summary>
-  public static HtmlTag meta(params HtmlContent[] children) =>
-    H("meta", children);
+  /// <summary>meta</summary>
+  public static TagAttributeBuilder meta => Tag("meta");
 
-  /// <summary>meter	Defines a hyperlink</summary>
-  public static HtmlTag meter(params HtmlContent[] children) =>
-    H("meter", children);
+  /// <summary>meter</summary>
+  public static TagAttributeBuilder meter => Tag("meter");
 
-  /// <summary>nav	Defines a hyperlink</summary>
-  public static HtmlTag nav(params HtmlContent[] children) =>
-    H("nav", children);
+  /// <summary>nav</summary>
+  public static TagAttributeBuilder nav => Tag("nav");
 
-  /// <summary>object	Defines a hyperlink</summary>
-  public static HtmlTag @object(params HtmlContent[] children) =>
-    H("object", children);
+  /// <summary>object</summary>
+  public static TagAttributeBuilder @object => Tag("object");
 
-  /// <summary>ol	Defines a hyperlink</summary>
-  public static HtmlTag ol(params HtmlContent[] children) => H("ol", children);
+  /// <summary>ol</summary>
+  public static TagAttributeBuilder ol => Tag("ol");
 
-  /// <summary>optgroup	Defines a hyperlink</summary>
-  public static HtmlTag optgroup(params HtmlContent[] children) =>
-    H("optgroup", children);
+  /// <summary>optgroup</summary>
+  public static TagAttributeBuilder optgroup => Tag("optgroup");
 
-  /// <summary>option	Defines a hyperlink</summary>
-  public static HtmlTag option(params HtmlContent[] children) =>
-    H("option", children);
+  /// <summary>option</summary>
+  public static TagAttributeBuilder option => Tag("option");
 
-  /// <summary>output	Defines a hyperlink</summary>
-  public static HtmlTag output(params HtmlContent[] children) =>
-    H("output", children);
+  /// <summary>output</summary>
+  public static TagAttributeBuilder output => Tag("output");
 
-  /// <summary>p	Defines a hyperlink</summary>
-  public static HtmlTag p(params HtmlContent[] children) => H("p", children);
+  /// <summary>p</summary>
+  public static TagAttributeBuilder p => Tag("p");
 
-  /// <summary>param	Defines a hyperlink</summary>
-  public static HtmlTag param(params HtmlContent[] children) =>
-    H("param", children);
+  /// <summary>param</summary>
+  public static TagAttributeBuilder param => Tag("param");
 
-  /// <summary>picture	Defines a hyperlink</summary>
-  public static HtmlTag picture(params HtmlContent[] children) =>
-    H("picture", children);
+  /// <summary>picture</summary>
+  public static TagAttributeBuilder picture => Tag("picture");
 
-  /// <summary>pre	Defines a hyperlink</summary>
-  public static HtmlTag pre(params HtmlContent[] children) =>
-    H("pre", children);
+  /// <summary>pre</summary>
+  public static TagAttributeBuilder pre => Tag("pre");
 
-  /// <summary>progress	Defines a hyperlink</summary>
-  public static HtmlTag progress(params HtmlContent[] children) =>
-    H("progress", children);
+  /// <summary>progress</summary>
+  public static TagAttributeBuilder progress => Tag("progress");
 
-  /// <summary>q	Defines a hyperlink</summary>
-  public static HtmlTag q(params HtmlContent[] children) => H("q", children);
+  /// <summary>q</summary>
+  public static TagAttributeBuilder q => Tag("q");
 
-  /// <summary>rp	Defines a hyperlink</summary>
-  public static HtmlTag rp(params HtmlContent[] children) => H("rp", children);
+  /// <summary>rp</summary>
+  public static TagAttributeBuilder rp => Tag("rp");
 
-  /// <summary>rt	Defines a hyperlink</summary>
-  public static HtmlTag rt(params HtmlContent[] children) => H("rt", children);
+  /// <summary>rt</summary>
+  public static TagAttributeBuilder rt => Tag("rt");
 
-  /// <summary>ruby	Defines a hyperlink</summary>
-  public static HtmlTag ruby(params HtmlContent[] children) =>
-    H("ruby", children);
+  /// <summary>ruby</summary>
+  public static TagAttributeBuilder ruby => Tag("ruby");
 
-  /// <summary>s	Defines a hyperlink</summary>
-  public static HtmlTag s(params HtmlContent[] children) => H("s", children);
+  /// <summary>s</summary>
+  public static TagAttributeBuilder s => Tag("s");
 
-  /// <summary>samp	Defines a hyperlink</summary>
-  public static HtmlTag samp(params HtmlContent[] children) =>
-    H("samp", children);
+  /// <summary>samp</summary>
+  public static TagAttributeBuilder samp => Tag("samp");
 
-  /// <summary>script	Defines a hyperlink</summary>
-  public static HtmlTag script(params HtmlContent[] children) =>
-    H("script", children);
+  /// <summary>script</summary>
+  public static TagAttributeBuilder script => Tag("script");
 
-  /// <summary>section	Defines a hyperlink</summary>
-  public static HtmlTag section(params HtmlContent[] children) =>
-    H("section", children);
+  /// <summary>section</summary>
+  public static TagAttributeBuilder section => Tag("section");
 
-  /// <summary>select	Defines a hyperlink</summary>
-  public static HtmlTag select(params HtmlContent[] children) =>
-    H("select", children);
+  /// <summary>select</summary>
+  public static TagAttributeBuilder select => Tag("select");
 
-  /// <summary>small	Defines a hyperlink</summary>
-  public static HtmlTag small(params HtmlContent[] children) =>
-    H("small", children);
+  /// <summary>small</summary>
+  public static TagAttributeBuilder small => Tag("small");
 
-  /// <summary>source	Defines a hyperlink</summary>
-  public static HtmlTag source(params HtmlContent[] children) =>
-    H("source", children);
+  /// <summary>source</summary>
+  public static TagAttributeBuilder source => Tag("source");
 
-  /// <summary>span	Defines a hyperlink</summary>
-  public static HtmlTag span(params HtmlContent[] children) =>
-    H("span", children);
+  /// <summary>span</summary>
+  public static TagAttributeBuilder span => Tag("span");
 
-  /// <summary>strong	Defines a hyperlink</summary>
-  public static HtmlTag strong(params HtmlContent[] children) =>
-    H("strong", children);
+  /// <summary>strong</summary>
+  public static TagAttributeBuilder strong => Tag("strong");
 
-  /// <summary>style	Defines a hyperlink</summary>
-  public static HtmlTag style(params HtmlContent[] children) =>
-    H("style", children);
+  /// <summary>style</summary>
+  public static TagAttributeBuilder style => Tag("style");
 
-  /// <summary>sub	Defines a hyperlink</summary>
-  public static HtmlTag sub(params HtmlContent[] children) =>
-    H("sub", children);
+  /// <summary>sub</summary>
+  public static TagAttributeBuilder sub => Tag("sub");
 
-  /// <summary>summary	Defines a hyperlink</summary>
-  public static HtmlTag summary(params HtmlContent[] children) =>
-    H("summary", children);
+  /// <summary>summary</summary>
+  public static TagAttributeBuilder summary => Tag("summary");
 
-  /// <summary>sup	Defines a hyperlink</summary>
-  public static HtmlTag sup(params HtmlContent[] children) =>
-    H("sup", children);
+  /// <summary>sup</summary>
+  public static TagAttributeBuilder sup => Tag("sup");
 
-  /// <summary>svg	Defines a hyperlink</summary>
-  public static HtmlTag svg(params HtmlContent[] children) =>
-    H("svg", children);
+  /// <summary>svg</summary>
+  public static TagAttributeBuilder svg => Tag("svg");
 
-  /// <summary>table	Defines a hyperlink</summary>
-  public static HtmlTag table(params HtmlContent[] children) =>
-    H("table", children);
+  /// <summary>table</summary>
+  public static TagAttributeBuilder table => Tag("table");
 
-  /// <summary>tbody	Defines a hyperlink</summary>
-  public static HtmlTag tbody(params HtmlContent[] children) =>
-    H("tbody", children);
+  /// <summary>tbody</summary>
+  public static TagAttributeBuilder tbody => Tag("tbody");
 
-  /// <summary>td	Defines a hyperlink</summary>
-  public static HtmlTag td(params HtmlContent[] children) => H("td", children);
+  /// <summary>td</summary>
+  public static TagAttributeBuilder td => Tag("td");
 
-  /// <summary>template	Defines a hyperlink</summary>
-  public static HtmlTag template(params HtmlContent[] children) =>
-    H("template", children);
+  /// <summary>template</summary>
+  public static TagAttributeBuilder template => Tag("template");
 
-  /// <summary>textarea	Defines a hyperlink</summary>
-  public static HtmlTag textarea(params HtmlContent[] children) =>
-    H("textarea", children);
+  /// <summary>textarea</summary>
+  public static TagAttributeBuilder textarea => Tag("textarea");
 
-  /// <summary>tfoot	Defines a hyperlink</summary>
-  public static HtmlTag tfoot(params HtmlContent[] children) =>
-    H("tfoot", children);
+  /// <summary>tfoot</summary>
+  public static TagAttributeBuilder tfoot => Tag("tfoot");
 
-  /// <summary>th	Defines a hyperlink</summary>
-  public static HtmlTag th(params HtmlContent[] children) => H("th", children);
+  /// <summary>th</summary>
+  public static TagAttributeBuilder th => Tag("th");
 
-  /// <summary>thead	Defines a hyperlink</summary>
-  public static HtmlTag thead(params HtmlContent[] children) =>
-    H("thead", children);
+  /// <summary>thead</summary>
+  public static TagAttributeBuilder thead => Tag("thead");
 
-  /// <summary>time	Defines a hyperlink</summary>
-  public static HtmlTag time(params HtmlContent[] children) =>
-    H("time", children);
+  /// <summary>time</summary>
+  public static TagAttributeBuilder time => Tag("time");
 
-  /// <summary>title	Defines a hyperlink</summary>
-  public static HtmlTag title(params HtmlContent[] children) =>
-    H("title", children);
+  /// <summary>title</summary>
+  public static TagAttributeBuilder title => Tag("title");
 
-  /// <summary>tr	Defines a hyperlink</summary>
-  public static HtmlTag tr(params HtmlContent[] children) => H("tr", children);
+  /// <summary>tr</summary>
+  public static TagAttributeBuilder tr => Tag("tr");
 
-  /// <summary>track	Defines a hyperlink</summary>
-  public static HtmlTag track(params HtmlContent[] children) =>
-    H("track", children);
+  /// <summary>track</summary>
+  public static TagAttributeBuilder track => Tag("track");
 
-  /// <summary>u	Defines a hyperlink</summary>
-  public static HtmlTag u(params HtmlContent[] children) => H("u", children);
+  /// <summary>u</summary>
+  public static TagAttributeBuilder u => Tag("u");
 
-  /// <summary>ul	Defines a hyperlink</summary>
-  public static HtmlTag ul(params HtmlContent[] children) => H("ul", children);
+  /// <summary>ul</summary>
+  public static TagAttributeBuilder ul => Tag("ul");
 
-  /// <summary>var	Defines a hyperlink</summary>
-  public static HtmlTag var(params HtmlContent[] children) =>
-    H("var", children);
+  /// <summary>var</summary>
+  public static TagAttributeBuilder var => Tag("var");
 
-  /// <summary>video	Defines a hyperlink</summary>
-  public static HtmlTag video(params HtmlContent[] children) =>
-    H("video", children);
+  /// <summary>video</summary>
+  public static TagAttributeBuilder video => Tag("video");
 
-  /// <summary>wbr	Defines a hyperlink</summary>
-  public static HtmlTag wbr(params HtmlContent[] children) =>
-    H("wbr", children);
+  /// <summary>wbr</summary>
+  public static TagAttributeBuilder wbr => Tag("wbr");
 }
