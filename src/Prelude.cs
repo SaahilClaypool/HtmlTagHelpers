@@ -7,6 +7,8 @@ public delegate TagBuilder TagAttributeBuilder(params Attr[] attrs);
 
 public static partial class Prelude
 {
+  public static Html Map(IEnumerable<Html> html) => Html._(html);
+
   public static T If<T>(bool t, T val, Func<T> other) => t ? val : other();
 
   public static T If<T>(bool t, T val, T other) => t ? val : other;
@@ -22,6 +24,8 @@ public static partial class Prelude
 
   public static TagAttributeBuilder Tag(string tagName) =>
     new TagAttrBuilderStruct(tagName).TagAttributeBuilder;
+
+  public static readonly Html Empty = Html.Empty;
 
   record struct TagAttrBuilderStruct(string TagName)
   {

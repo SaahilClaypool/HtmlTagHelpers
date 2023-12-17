@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "generator", "generator\generator.csproj", "{EBB9A66A-B8C5-447D-9C33-659956867CBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-asp", "example-asp\example-asp.csproj", "{0F6927EA-F4CD-43CD-94B8-B840C2FF3CFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{EBB9A66A-B8C5-447D-9C33-659956867CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB9A66A-B8C5-447D-9C33-659956867CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB9A66A-B8C5-447D-9C33-659956867CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6927EA-F4CD-43CD-94B8-B840C2FF3CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6927EA-F4CD-43CD-94B8-B840C2FF3CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6927EA-F4CD-43CD-94B8-B840C2FF3CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6927EA-F4CD-43CD-94B8-B840C2FF3CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
