@@ -6,7 +6,7 @@ jobs:
   publish:
     strategy:
       matrix:
-        dotnet-version: ["7.0.x"]
+        dotnet-version: ["8.0.x"]
     name: pack and publish
     runs-on: ubuntu-latest
     steps:
