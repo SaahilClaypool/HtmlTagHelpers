@@ -20,6 +20,8 @@ public static partial class Prelude
   public static Attr Attr(string name, string value, bool escape = false) =>
     escape ? Attr(name, value) : Eighty.Attr.Raw(name, value);
 
+  public static IEnumerable<Attr> Attrs(params Attr[] attrs) => attrs;
+
   public static Html Raw(string html) => Html.Raw(html);
 
   public static TagAttributeBuilder Tag(string tagName) =>

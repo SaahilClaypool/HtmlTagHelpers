@@ -7,8 +7,8 @@ public static partial class Prelude
     {{string.Join("\n\n", Tags().Select(tag => $$"""
 
     /// <summary>{{Tag(tag)}}</summary>
-    public static TagAttributeBuilder {{tag}} =>
-        Tag("{{tag.Replace("@", "")}}");
+    public static TagBuilder {{tag}}(params Eighty.Attr[] attrs) =>
+        Tag("{{tag.Replace("@", "")}}")(attrs);
 """))}}
 }
 """;

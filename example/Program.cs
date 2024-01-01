@@ -23,13 +23,13 @@ var document = html()(
       ("onClick", "console.log('clicked')")
     )("this paragraph has a border"),
     p(Attr("hidden"))("hidden content"),
-    MButton(("onClick", "console.log('override')"))("test"),
+    MButton(Attrs(("onClick", "console.log('override')")), "test"),
     ul()(myElements.Select(i => li()(i)).ToArray())
   )
 );
 
 // example functional component
-TagBuilder MButton(params Eighty.Attr[] content) =>
-  button(content.Append(("onClick", "console.log('default')")).ToArray());
+Eighty.Html MButton(IEnumerable<Eighty.Attr> attributes, string name) =>
+  button(attributes.ToArray())(name);
 
 Console.WriteLine(document.ToString());
